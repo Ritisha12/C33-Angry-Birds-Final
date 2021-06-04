@@ -11,8 +11,9 @@ var bird, slingshot;
 var gameState = "onSling";
 var bg = "sprites/bg1.png";
 var score = 0;
-
+var staticimg
 function preload() {
+    staticimg=loadImage(b)
     getBackgroundImg();
 }
 
@@ -49,7 +50,7 @@ function setup(){
 function draw(){
     if(backgroundImg)
         background(backgroundImg);
-    
+        else{background(staticimg)}
         noStroke();
         textSize(35)
         fill("white")
